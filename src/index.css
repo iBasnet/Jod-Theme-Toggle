@@ -1,0 +1,86 @@
+:root {
+    --s0: #f8fafc;
+    --s1: #f1f5f9;
+    --s2: #e2e8f0;
+    --s3: #cbd5e1;
+    --s4: #94a3b8;
+    --s5: #64748b;
+    --s6: #475569;
+    --s7: #334155;
+    --s8: #1e293b;
+    --s9: #0f172a;
+    --s10: hsl(229, 84%, 5%);
+    --s11: hsl(229, 84%, 2.5%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Inter', system-ui;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.5s ease;
+}
+
+body.light {
+    --bg-color: var(--s1);
+    --text-color: var(--s11);
+    --text-color-p: var(--s8);
+}
+
+body.dark {
+    --bg-color: var(--s11);
+    --text-color: var(--s1);
+    --text-color-p: var(--s4);
+}
+
+.App {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    gap: 1rem;
+
+    hgroup {
+        text-align: center;
+
+        h1 {
+            font-family: 'Inter', system-ui;
+        }
+
+        p {
+            font-family: 'Space Grotesk', system-ui;
+            color: var(--text-color-p);
+        }
+    }
+
+    .btn {
+        font-size: 1.2rem;
+        padding: .5em 1em;
+        border-radius: 4em;
+        border: none;
+        outline: none;
+        font-family: 'Clash Display', system-ui;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        color: var(--s10);
+        background-image: linear-gradient(#ddd, azure);
+        box-shadow: 0px .25em 0px slategray;
+    }
+
+    .btn:active {
+        transform: translateY(.5em);
+        box-shadow: 0px 0px 0px slategray;
+    }
+}
